@@ -1,19 +1,10 @@
-language: swift
-osx_image: xcode10.3
-branches:
-  only:
-    - master
-env:
-  global:
-  - WORKSPACE=LocalServer.xcworkspace
-  - SCHEME=LocalServer
-  - DESTINATION='platform=iOS Simulator,name=iPhone X,OS=12.4'
-before_install:
-  - gem install xcpretty --no-document --quiet
-script:
-  - set -o pipefail
-  - xcodebuild -version
-  - xcodebuild -showsdks
-  - xcodebuild clean test -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration 'Debug' | xcpretty
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - name: Run .travis.yml build script
+    uses: ktomk/run-travis-yml@v1
+    with:
+      file: .travis.yml
+      steps: |
+        install
+        script
+      allow-failure: false
+    env:
+      TRAVIS_PHP_VERSION: ${{ matrix.php-versions }}
