@@ -1,0 +1,71 @@
+{
+  "": {
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/master.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/DataExtension.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/Exchangeable.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/Router.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/StubResponse.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/StubServer.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/StubURLHTTPProtocol.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/StubURLSession.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/StubWKWebView.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/UITestResponse.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/UITestServer.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServer/Source/UITestState.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swiftdeps"
+  }
+}

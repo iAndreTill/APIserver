@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/master.swiftdeps"
+  },
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/LocalServerTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swiftdeps"
+  },
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/all-discovered-tests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swiftdeps"
+  }
+}

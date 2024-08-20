@@ -1,0 +1,164 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "LocalServer-debug.module": ["<LocalServer-debug.module>"]
+  "LocalServerPackageDiscoveredTests-debug.module": ["<LocalServerPackageDiscoveredTests-debug.module>"]
+  "LocalServerPackageTests-debug.module": ["<LocalServerPackageTests-debug.module>"]
+  "LocalServerPackageTests-debug.test": ["<LocalServerPackageTests-debug.test>"]
+  "LocalServerTests-debug.module": ["<LocalServerTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<LocalServer-debug.module>"]
+  "test": ["<LocalServer-debug.module>","<LocalServerPackageTests-debug.test>","<LocalServerTests-debug.module>"]
+default: "main"
+nodes:
+  "/workspaces/APIserver/LocalServer/Source/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/workspaces/APIserver/LocalServerTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/LocalServer.swiftmodule.o":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/LocalServer.swiftmodule.o"]
+    description: "Wrapping AST for LocalServer for debugging"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-modulewrap","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule","-o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/LocalServer.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/workspaces/APIserver/LocalServer/Source/DataExtension.swift","/workspaces/APIserver/LocalServer/Source/Exchangeable.swift","/workspaces/APIserver/LocalServer/Source/Router.swift","/workspaces/APIserver/LocalServer/Source/StubResponse.swift","/workspaces/APIserver/LocalServer/Source/StubServer.swift","/workspaces/APIserver/LocalServer/Source/StubURLHTTPProtocol.swift","/workspaces/APIserver/LocalServer/Source/StubURLSession.swift","/workspaces/APIserver/LocalServer/Source/StubWKWebView.swift","/workspaces/APIserver/LocalServer/Source/UITestResponse.swift","/workspaces/APIserver/LocalServer/Source/UITestServer.swift","/workspaces/APIserver/LocalServer/Source/UITestState.swift"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/sources"]
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/sources"
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerPackageDiscoveredTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerPackageDiscoveredTests.swiftmodule.o"]
+    description: "Wrapping AST for LocalServerPackageDiscoveredTests for debugging"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-modulewrap","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule","-o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerPackageDiscoveredTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/LocalServerTests.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/sources"]
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/sources"
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/all-discovered-tests.swift":
+    tool: test-discovery-tool
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/LocalServerTests.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/LocalServerPackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.swiftmodule"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/LocalServerPackageTests.swiftmodule.o"]
+    description: "Wrapping AST for LocalServerPackageTests for debugging"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-modulewrap","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.swiftmodule","-o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/LocalServerPackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.derived/runner.swift"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/sources"]
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/sources"
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.derived/runner.swift"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/LocalServer.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerPackageDiscoveredTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/LocalServerPackageTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/LocalServerTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.product/Objects.LinkFileList"
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/LocalServerTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/LocalServerTests.swiftmodule.o"]
+    description: "Wrapping AST for LocalServerTests for debugging"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-modulewrap","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule","-o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/LocalServerTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/workspaces/APIserver/LocalServerTests/DataExtensionTests.swift","/workspaces/APIserver/LocalServerTests/StubResponseTests.swift","/workspaces/APIserver/LocalServerTests/StubServerTests.swift","/workspaces/APIserver/LocalServerTests/TestExtensions.swift","/workspaces/APIserver/LocalServerTests/UITestResponseTests.swift","/workspaces/APIserver/LocalServerTests/WKWebViewResponseTests.swift"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/sources"]
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/sources"
+
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt"
+
+  "<LocalServer-debug.module>":
+    tool: phony
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule"]
+    outputs: ["<LocalServer-debug.module>"]
+
+  "<LocalServerPackageDiscoveredTests-debug.module>":
+    tool: phony
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule"]
+    outputs: ["<LocalServerPackageDiscoveredTests-debug.module>"]
+
+  "<LocalServerPackageTests-debug.module>":
+    tool: phony
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.swiftmodule"]
+    outputs: ["<LocalServerPackageTests-debug.module>"]
+
+  "<LocalServerPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.xctest"]
+    outputs: ["<LocalServerPackageTests-debug.test>"]
+
+  "<LocalServerTests-debug.module>":
+    tool: phony
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule"]
+    outputs: ["<LocalServerTests-debug.module>"]
+
+  "C.LocalServer-debug.module":
+    tool: shell
+    inputs: ["/workspaces/APIserver/LocalServer/Source/DataExtension.swift","/workspaces/APIserver/LocalServer/Source/Exchangeable.swift","/workspaces/APIserver/LocalServer/Source/Router.swift","/workspaces/APIserver/LocalServer/Source/StubResponse.swift","/workspaces/APIserver/LocalServer/Source/StubServer.swift","/workspaces/APIserver/LocalServer/Source/StubURLHTTPProtocol.swift","/workspaces/APIserver/LocalServer/Source/StubURLSession.swift","/workspaces/APIserver/LocalServer/Source/StubWKWebView.swift","/workspaces/APIserver/LocalServer/Source/UITestResponse.swift","/workspaces/APIserver/LocalServer/Source/UITestServer.swift","/workspaces/APIserver/LocalServer/Source/UITestState.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/sources"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule"]
+    description: "Compiling Swift Module 'LocalServer' (11 sources)"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-module-name","LocalServer","-emit-dependencies","-emit-module","-emit-module-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule","-output-file-map","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/output-file-map.json","-parse-as-library","-incremental","-c","@/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/sources","-I","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.LocalServerPackageDiscoveredTests-debug.module":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/LocalServerTests.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.derived/all-discovered-tests.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/sources"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule"]
+    description: "Compiling Swift Module 'LocalServerPackageDiscoveredTests' (2 sources)"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-module-name","LocalServerPackageDiscoveredTests","-emit-dependencies","-emit-module","-emit-module-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule","-output-file-map","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/sources","-I","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.LocalServerPackageTests-debug.module":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.derived/runner.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.swiftmodule","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/sources"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'LocalServerPackageTests' (1 sources)"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-module-name","LocalServerPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.swiftmodule","-output-file-map","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/sources","-I","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.LocalServerPackageTests-debug.test":
+    tool: shell
+    inputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/DataExtension.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Exchangeable.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/LocalServer.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/Router.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLHTTPProtocol.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubURLSession.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/StubWKWebView.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestResponse.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestServer.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.build/UITestState.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerPackageDiscoveredTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/LocalServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageDiscoveredTests.build/all-discovered-tests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/LocalServerPackageTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/LocalServerTests.swiftmodule.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.xctest"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-L","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug","-o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.xctest","-module-name","LocalServerPackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.LocalServerTests-debug.module":
+    tool: shell
+    inputs: ["/workspaces/APIserver/LocalServerTests/DataExtensionTests.swift","/workspaces/APIserver/LocalServerTests/StubResponseTests.swift","/workspaces/APIserver/LocalServerTests/StubServerTests.swift","/workspaces/APIserver/LocalServerTests/TestExtensions.swift","/workspaces/APIserver/LocalServerTests/UITestResponseTests.swift","/workspaces/APIserver/LocalServerTests/WKWebViewResponseTests.swift","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/swift-version--5354B8C95C265E5D.txt","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServer.swiftmodule","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/sources"]
+    outputs: ["/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule"]
+    description: "Compiling Swift Module 'LocalServerTests' (6 sources)"
+    args: ["/home/codespace/.local/share/swiftly/toolchains/5.10.1/usr/bin/swiftc","-module-name","LocalServerTests","-emit-dependencies","-emit-module","-emit-module-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.swiftmodule","-output-file-map","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/sources","-I","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/workspaces/APIserver/LocalServer/Source/","/workspaces/APIserver/LocalServerTests/","/workspaces/APIserver/Package.swift","/workspaces/APIserver/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

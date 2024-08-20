@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/master.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/DataExtensionTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/DataExtensionTests.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/StubResponseTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubResponseTests.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/StubServerTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/StubServerTests.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/TestExtensions.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/TestExtensions.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/UITestResponseTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/UITestResponseTests.swiftdeps"
+  },
+  "/workspaces/APIserver/LocalServerTests/WKWebViewResponseTests.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerTests.build/WKWebViewResponseTests.swiftdeps"
+  }
+}

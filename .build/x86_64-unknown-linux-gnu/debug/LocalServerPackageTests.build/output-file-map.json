@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/master.swiftdeps"
+  },
+  "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.derived/runner.swift": {
+    "dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.d",
+    "object": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swift.o",
+    "swiftmodule": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/workspaces/APIserver/.build/x86_64-unknown-linux-gnu/debug/LocalServerPackageTests.build/runner.swiftdeps"
+  }
+}
